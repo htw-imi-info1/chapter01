@@ -81,6 +81,8 @@ public class Canvas
             Dimension size = canvas.getSize();
             canvasImage = canvas.createImage(size.width, size.height);
             graphic = (Graphics2D)canvasImage.getGraphics();
+            graphic.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
+                          RenderingHints.VALUE_ANTIALIAS_ON);
             graphic.setColor(backgroundColor);
             graphic.fillRect(0, 0, size.width, size.height);
             graphic.setColor(Color.black);
