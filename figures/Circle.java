@@ -10,21 +10,23 @@ import java.awt.geom.*;
 
 public class Circle
 {
-    private int diameter;
-    private int xPosition;
-    private int yPosition;
-    private String color;
-    private boolean isVisible;
+    private int diameter = 5;
+    private int xPosition = 0;
+    private int yPosition = 0;
+    private String color = null;
+    private boolean isVisible = false;
     
     /**
      * Create a new circle at default position with default color.
      */
     public Circle()
     {
-        diameter = 68;
+        int diameter = 68;
+        diameter = 100; // changes local variable
+        this.diameter = 200; // changes field (instance Variable)
         xPosition = 230;
         yPosition = 90;
-        color = "blue";
+        color = "red";
     }
 
     /**
