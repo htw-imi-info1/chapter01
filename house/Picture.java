@@ -7,7 +7,7 @@
  * This class was written as an early example for teaching Java with BlueJ.
  * 
  * @author  Michael Kšlling and David J. Barnes
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 public class Picture
 {
@@ -15,13 +15,18 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private boolean drawn;
 
     /**
      * Constructor for objects of class Picture
      */
     public Picture()
     {
-        // nothing to do... instance variables are automatically set to null
+        wall = new Square();
+        window = new Square();
+        roof = new Triangle();  
+        sun = new Circle();
+        drawn = false;
     }
 
     /**
@@ -29,31 +34,30 @@ public class Picture
      */
     public void draw()
     {
-        wall = new Square();
-        wall.moveHorizontal(-140);
-        wall.moveVertical(20);
-        wall.changeSize(120);
-        wall.makeVisible();
-        
-        window = new Square();
-        window.changeColor("black");
-        window.moveHorizontal(-120);
-        window.moveVertical(40);
-        window.changeSize(40);
-        window.makeVisible();
-
-        roof = new Triangle();  
-        roof.changeSize(60, 180);
-        roof.moveHorizontal(20);
-        roof.moveVertical(-60);
-        roof.makeVisible();
-
-        sun = new Circle();
-        sun.changeColor("yellow");
-        sun.moveHorizontal(100);
-        sun.moveVertical(-40);
-        sun.changeSize(80);
-        sun.makeVisible();
+        if(!drawn) {
+            wall.moveHorizontal(-140);
+            wall.moveVertical(20);
+            wall.changeSize(120);
+            wall.makeVisible();
+            
+            window.changeColor("black");
+            window.moveHorizontal(-120);
+            window.moveVertical(40);
+            window.changeSize(40);
+            window.makeVisible();
+    
+            roof.changeSize(60, 180);
+            roof.moveHorizontal(20);
+            roof.moveVertical(-60);
+            roof.makeVisible();
+    
+            sun.changeColor("yellow");
+            sun.moveHorizontal(100);
+            sun.moveVertical(-40);
+            sun.changeSize(80);
+            sun.makeVisible();
+            drawn = true;
+        }
     }
 
     /**
@@ -61,13 +65,10 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        if (wall != null)   // only if it's painted already...
-        {
-            wall.changeColor("black");
-            window.changeColor("white");
-            roof.changeColor("black");
-            sun.changeColor("black");
-        }
+        wall.changeColor("black");
+        window.changeColor("white");
+        roof.changeColor("black");
+        sun.changeColor("black");
     }
 
     /**
@@ -75,12 +76,9 @@ public class Picture
      */
     public void setColor()
     {
-        if (wall != null)   // only if it's painted already...
-        {
-            wall.changeColor("red");
-            window.changeColor("black");
-            roof.changeColor("green");
-            sun.changeColor("yellow");
-        }
+        wall.changeColor("red");
+        window.changeColor("black");
+        roof.changeColor("green");
+        sun.changeColor("yellow");
     }
 }
