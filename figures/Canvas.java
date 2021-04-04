@@ -11,7 +11,7 @@ import java.util.*;
  * @author: Bruce Quig
  * @author: Michael Kölling (mik)
  *
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 public class Canvas
 {

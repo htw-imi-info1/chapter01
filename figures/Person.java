@@ -4,7 +4,7 @@ import java.awt.*;
  * A person that can be manipulated and that draws itself on a canvas.
  * 
  * @author  Michael Kölling and David J. Barnes
- * @version 2011.07.31
+ * @version 2016.02.29
  */
 
 public class Person
