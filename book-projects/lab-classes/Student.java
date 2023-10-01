@@ -14,6 +14,8 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
+    // the pronoun the student uses
+    private String pronouns;
 
     /**
      * Create a new student with a given name and ID number.
@@ -76,10 +78,31 @@ public class Student
     }
     
     /**
-     * Print the student's name and ID number to the output terminal.
+     * set the pronouns the student uses
+     */
+    public void setPronouns(String newPronouns){
+        pronouns = newPronouns;
+    }
+    /**
+     * Return the pronouns the student uses
+     */
+    public String getPronouns(){
+        return pronouns;
+    }
+    
+    /**
+     * Print the student's name, ID number and pronouns to the output terminal.
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        System.out.println(name + "(" + pronouns + "), student ID: " + id );
+    }
+    
+    /**
+     * Print the student's name, ID number, credits and pronouns to the output terminal.
+     */
+    public void printWithCredit()
+    {
+        System.out.println(name + "(" + pronouns + "), student ID: " + id + ", credits: " + credits);
     }
 }
