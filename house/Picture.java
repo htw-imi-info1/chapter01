@@ -21,7 +21,7 @@ public class Picture
      */
     public Picture()
     {
-        // nothing to do... instance variables are automatically set to null
+        draw();
     }
 
     /**
@@ -34,7 +34,7 @@ public class Picture
         wall.moveVertical(20);
         wall.changeSize(120);
         wall.makeVisible();
-        
+
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(-120);
@@ -83,4 +83,5 @@ public class Picture
             sun.changeColor("yellow");
         }
     }
+
 }
