@@ -1,7 +1,7 @@
 # chapter01
 Example Source Code for Chapter 1 and Lab 1
 
-Use the green Button Code -> Download ZIP to download the whole repository as ZIP file.
+Use the green Button Code -> Download ZIP (only on the main repo site https://github.com/htw-imi-info1/chapter01) to download the whole repository as ZIP file.
 
 ## use git
 
