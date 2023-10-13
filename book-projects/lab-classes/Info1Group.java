@@ -7,13 +7,14 @@
  */
 public class Info1Group
 {
-    
+
     public Info1Group(){
-       
+
     }  
- 
+
     public LabClass createGroup()
     {
-       return null;
+        LabClass labClass = new LabClass(3);
+        return labClass;
     }
 }
